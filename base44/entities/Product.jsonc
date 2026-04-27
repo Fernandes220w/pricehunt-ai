@@ -1,0 +1,52 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do produto"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "eletronicos",
+        "moda",
+        "casa",
+        "beleza",
+        "esporte",
+        "games",
+        "livros",
+        "outros"
+      ],
+      "description": "Categoria do produto"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o detalhada do produto"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL da imagem do produto"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Marca do produto"
+    },
+    "reliability_score": {
+      "type": "number",
+      "description": "Score de confiabilidade PriceHunt (0-100)"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags para busca e categoriza\u00e7\u00e3o"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "reliability_score"
+  ]
+}

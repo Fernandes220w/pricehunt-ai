@@ -1,0 +1,40 @@
+{
+  "name": "BotInteraction",
+  "type": "object",
+  "properties": {
+    "conversation_id": {
+      "type": "string",
+      "description": "ID da conversa"
+    },
+    "user_message": {
+      "type": "string",
+      "description": "Mensagem do usu\u00e1rio"
+    },
+    "bot_response": {
+      "type": "string",
+      "description": "Resposta do bot"
+    },
+    "products_recommended": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs dos produtos recomendados"
+    },
+    "affiliate_links_generated": {
+      "type": "number",
+      "description": "Quantidade de links de afiliado gerados"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "pt",
+        "en"
+      ],
+      "default": "pt"
+    }
+  },
+  "required": [
+    "conversation_id"
+  ]
+}

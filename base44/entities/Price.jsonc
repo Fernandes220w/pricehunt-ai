@@ -1,0 +1,60 @@
+{
+  "name": "Price",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "description": "ID do produto associado"
+    },
+    "store_name": {
+      "type": "string",
+      "description": "Nome da loja"
+    },
+    "store_url": {
+      "type": "string",
+      "description": "URL original da loja"
+    },
+    "price": {
+      "type": "number",
+      "description": "Pre\u00e7o atual em BRL"
+    },
+    "original_price": {
+      "type": "number",
+      "description": "Pre\u00e7o original antes do desconto"
+    },
+    "currency": {
+      "type": "string",
+      "default": "BRL",
+      "description": "Moeda"
+    },
+    "affiliate_network": {
+      "type": "string",
+      "enum": [
+        "awin",
+        "shopee",
+        "amazon",
+        "manual"
+      ],
+      "description": "Rede de afiliados"
+    },
+    "affiliate_id": {
+      "type": "string",
+      "description": "ID do programa de afiliados"
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true,
+      "description": "Produto dispon\u00edvel na loja"
+    },
+    "last_checked": {
+      "type": "string",
+      "format": "date-time",
+      "description": "\u00daltima verifica\u00e7\u00e3o do pre\u00e7o"
+    }
+  },
+  "required": [
+    "product_id",
+    "store_name",
+    "price"
+  ]
+}
