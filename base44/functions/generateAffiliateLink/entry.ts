@@ -17,7 +17,8 @@ Deno.serve(async (req) => {
 
   switch (affiliate_network) {
     case 'awin':
-      affiliateLink = `https://www.awin1.com/cread.php?awinmid=${affiliate_id || 'default'}&awinaffid=YOUR_AWIN_ID&clickref=${subid}&ued=${encodeURIComponent(store_url + (store_url.includes('?') ? '&' : '?') + trackingParams)}`;
+      const awinPublisherId = Deno.env.get("AWIN_PUBLISHER_ID") || "";
+      affiliateLink = `https://www.awin1.com/cread.php?awinmid=${affiliate_id || ""}&awinaffid=${awinPublisherId}&clickref=${subid}&ued=${encodeURIComponent(store_url + (store_url.includes('?') ? '&' : '?') + trackingParams)}`;
       break;
     case 'shopee':
       affiliateLink = `https://shope.ee/redirect?url=${encodeURIComponent(store_url)}&af_id=pricehunt&sub_id=${subid}&${trackingParams}`;
