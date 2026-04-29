@@ -90,10 +90,7 @@ export default function Chat() {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-1.5 text-xs text-muted-foreground bg-secondary px-3 py-1.5 rounded-lg">
-            <ShieldCheck className="h-3 w-3 text-primary" />
-            <span>Sandbox</span>
-          </div>
+          
         </div>
       </header>
 
