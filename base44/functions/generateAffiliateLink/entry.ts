@@ -25,7 +25,7 @@ Deno.serve(async (req) => {
       break;
     case 'amazon':
       const separator = store_url.includes('?') ? '&' : '?';
-      affiliateLink = `${store_url}${separator}tag=pricehunt-20&${trackingParams}`;
+      affiliateLink = `${store_url}${separator}tag=pricehunt004-20&${trackingParams}`;
       break;
     default:
       const sep = store_url.includes('?') ? '&' : '?';

@@ -3,7 +3,7 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.25';
 // IDs de afiliado — configure nas variáveis de ambiente do dashboard
 const AWIN_PUBLISHER_ID = Deno.env.get("AWIN_PUBLISHER_ID") || "";
 const SHOPEE_APP_KEY = Deno.env.get("SHOPEE_APP_KEY") || "";
-const AMAZON_TAG = Deno.env.get("AMAZON_TAG") || "pricehunt-20";
+const AMAZON_TAG = Deno.env.get("AMAZON_TAG") || "pricehunt004-20";
 
 function buildAffiliateLink(price, productName) {
   const subid = `bot_${Date.now()}`;
