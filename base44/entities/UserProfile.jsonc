@@ -1,0 +1,71 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "ID ou email do usu\u00e1rio"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nome do usu\u00e1rio"
+    },
+    "search_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Hist\u00f3rico de buscas do usu\u00e1rio"
+    },
+    "viewed_products": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs de produtos visualizados"
+    },
+    "price_alerts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs de produtos com alerta de pre\u00e7o ativo"
+    },
+    "preferred_categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Categorias favoritas"
+    },
+    "preferred_stores": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Lojas favoritas"
+    },
+    "max_budget": {
+      "type": "number",
+      "description": "Or\u00e7amento m\u00e1ximo preferido em BRL"
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "app",
+        "whatsapp",
+        "instagram"
+      ],
+      "default": "app",
+      "description": "Canal de acesso preferido"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "\u00daltima vez que o usu\u00e1rio interagiu"
+    }
+  },
+  "required": [
+    "user_id"
+  ]
+}

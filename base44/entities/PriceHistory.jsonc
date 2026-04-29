@@ -1,0 +1,27 @@
+{
+  "name": "PriceHistory",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "description": "ID do produto"
+    },
+    "store_name": {
+      "type": "string",
+      "description": "Nome da loja"
+    },
+    "price": {
+      "type": "number",
+      "description": "Pre\u00e7o registrado"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora do registro"
+    }
+  },
+  "required": [
+    "product_id",
+    "price"
+  ]
+}
